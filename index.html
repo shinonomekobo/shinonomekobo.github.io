@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東雲工房 | SHINONOMEKOBO</title>
+<meta name="description" content="東雲工房は、アプリ開発を手がける個人開発スタジオです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #14182b;
+    --panel: #1c2038;
+    --text: #f3efe7;
+    --text-dim: #b3aec4;
+    --gold: #d8a657;
+    --coral: #e2896d;
+    --rule: rgba(243,239,231,0.14);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--gold); text-decoration: none; }
+  a:hover{ color: var(--coral); }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 80px;
+  }
+
+  .hero .eyebrow{
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    margin: 0 0 18px;
+  }
+
+  .brand{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .horizon{
+    height: 1px;
+    width: 0;
+    margin: 28px 0 30px;
+    background: linear-gradient(90deg, var(--gold), var(--coral) 60%, transparent);
+    animation: draw 1.6s ease-out 0.3s forwards;
+  }
+
+  @keyframes draw{
+    to{ width: min(280px, 60%); }
+  }
+
+  .tagline{
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    max-width: 34ch;
+    margin: 0;
+  }
+
+  /* ---------- Sections ---------- */
+  section{
+    padding: 64px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  section p{
+    max-width: 58ch;
+    color: var(--text);
+  }
+
+  /* ---------- Apps ---------- */
+  .section-title{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0 0 28px;
+  }
+
+  .app-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .app-icon{
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+
+  .app-name{
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .app-status{
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: var(--gold);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding: 40px 0 56px;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .horizon{ animation: none; width: min(280px, 60%); }
+    html{ scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap hero">
+    <p class="eyebrow">SHINONOMEKOBO</p>
+    <h1 class="brand">東雲工房</h1>
+    <div class="horizon" aria-hidden="true"></div>
+    <p class="tagline">見えなかったものに、光をあてる個人開発スタジオ。</p>
+  </div>
+
+  <section class="wrap">
+    <p>東雲工房は、アプリ開発を手がける個人開発スタジオです。日常のちょっとした不便を解消する、小さくて丁寧なアプリをつくっています。</p>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">アプリ</h2>
+    <div class="app-row">
+      <div class="app-icon" aria-hidden="true"></div>
+      <div>
+        <p class="app-name">最初のアプリ</p>
+        <p class="app-status">近日公開</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">お問い合わせ</h2>
+    <p><a href="mailto:info@shinonomekobo.com">info@shinonomekobo.com</a></p>
+  </section>
+
+  <footer class="wrap">
+    © 2026 東雲工房(SHINONOMEKOBO)
+  </footer>
+
+</body>
+</html>
