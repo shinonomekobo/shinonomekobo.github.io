@@ -54,6 +54,31 @@
   }
   .feature p{ margin: 0; color: var(--text-dim); }
 
+  .shots{
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 0 0 44px;
+  }
+  .shots figure{
+    margin: 0;
+    flex: 1 1 190px;
+    max-width: 250px;
+  }
+  .shots img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    border: 1px solid var(--rule);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.5);
+  }
+  .shots figcaption{
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
   .steps{
     counter-reset: step;
     list-style: none;
@@ -131,6 +156,18 @@
 
   <section class="wrap">
     <h2 class="section-title">使い方</h2>
+
+    <div class="shots">
+      <figure>
+        <img src="/assets/handydice-rolling.png" alt="サイコロ3個が卓の上で転がっている画面。下部のボタンの表示が「ふっています…」に変わり、枠がオレンジ色に光っている" width="331" height="720" loading="lazy">
+        <figcaption>押している間ずっと転がります</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/handydice-total.png" alt="サイコロ3個が1と5と3の目で止まり、卓の上に TOTAL 9 と表示された画面" width="331" height="720" loading="lazy">
+        <figcaption>止まると合計が出ます</figcaption>
+      </figure>
+    </div>
+
     <ol class="steps">
       <li><strong>振る</strong><span>画面下のボタンを押し続けるか、端末を振ります。押している間、振っている間はずっと転がり続けます。</span></li>
       <li><strong>離す</strong><span>手を止めるとサイコロが自然に減速し、止まったところで合計が表示されます。</span></li>
