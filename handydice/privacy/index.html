@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>プライバシーポリシー — HandyDice | 東雲工房</title>
-<meta name="description" content="HandyDice のプライバシーポリシー。個人情報・トラッキングデータの収集は行いません。">
+<meta name="description" content="HandyDice のプライバシーポリシー。個人を特定できる情報は収集せず、いかなるデータも外部に送信しません。">
 <link rel="canonical" href="https://shinonomekobo.com/handydice/privacy/">
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 <link rel="icon" href="/assets/favicon-180.png">
@@ -30,6 +30,17 @@
   }
   .policy section{ padding-top: 44px; padding-bottom: 44px; }
   .policy section:first-of-type{ border-top: none; }
+  /* 箇条書きは専用クラスにする。.policy ul だと .meta-list の指定を詳細度で上書きしてしまう */
+  .bullets{
+    max-width: 58ch;
+    margin: 0;
+    padding-left: 1.3em;
+  }
+  .bullets li{ margin-bottom: 4px; }
+  .history{
+    font-size: 0.9rem;
+    color: var(--text-dim);
+  }
 </style>
 </head>
 <body>
@@ -37,33 +48,70 @@
   <div class="wrap page-head">
     <p class="crumb"><a href="/handydice/">← HandyDice</a></p>
     <h1 class="page-title">プライバシーポリシー</h1>
-    <p class="updated">HandyDice ・ 最終更新日：2026年8月7日</p>
+    <p class="updated">HandyDice ・ 最終更新日：2026年9月16日</p>
     <div class="horizon" aria-hidden="true"></div>
-    <p class="lead">当アプリは、ユーザーの個人情報やトラッキングデータ、利用履歴等を一切収集・保存・外部送信していません。</p>
+    <p class="lead">HandyDice は、利用者を特定できる情報を一切収集せず、いかなるデータも外部に送信しません。アプリの動作はすべて端末内で完結します。</p>
   </div>
 
   <main class="policy">
     <section class="wrap">
-      <h2>収集する情報</h2>
-      <p>HandyDice は、氏名・メールアドレス・端末識別子などの個人を特定できる情報、位置情報、広告識別子（IDFA）、利用履歴、その他のトラッキングデータを一切取得しません。</p>
+      <h2>収集しない情報</h2>
+      <p>HandyDice は、次の情報を取得しません。</p>
+      <ul class="bullets">
+        <li>氏名・メールアドレス・電話番号など、個人を特定できる情報</li>
+        <li>位置情報</li>
+        <li>広告識別子（IDFA）および端末識別子</li>
+        <li>利用履歴・操作ログ・クラッシュログ</li>
+        <li>連絡先・写真・カメラ・マイクへのアクセス</li>
+      </ul>
+      <p>アカウント登録やログインの仕組みもありません。</p>
     </section>
 
     <section class="wrap">
-      <h2>データの保存・送信</h2>
-      <p>アプリ内で取得・保存・外部サーバーへの送信を行うユーザーデータはありません。インターネット通信を利用したデータの送信も行いません。</p>
+      <h2>端末内に保存する設定</h2>
+      <p>サウンドと触覚フィードバックのオン・オフ設定を、次回起動時に引き継ぐため端末内（iOS の UserDefaults）に保存します。この設定が端末の外に出ることはなく、開発者を含む第三者が参照することはできません。アプリを削除すると設定も削除されます。</p>
     </section>
 
     <section class="wrap">
-      <h2>第三者への提供</h2>
-      <p>収集する情報が存在しないため、第三者への提供・共有も一切ありません。広告 SDK や解析ツールも使用していません。</p>
+      <h2>モーションセンサーの利用</h2>
+      <p>端末を振る操作を検知するため、アプリを表示している間だけ加速度センサーの値を読み取ります。読み取った値はサイコロを転がす処理にその場で使うだけで、保存も外部送信も行いません。アプリを閉じると読み取りを停止します。歩数や運動量など、モーションとフィットネスのデータは取得しません。</p>
+    </section>
+
+    <section class="wrap">
+      <h2>外部送信・第三者提供</h2>
+      <p>アプリはインターネット通信を行いません。広告 SDK、アクセス解析ツール、その他の第三者製ソフトウェアを一切組み込んでいません。収集する情報が存在しないため、第三者への提供・共有もありません。</p>
+    </section>
+
+    <section class="wrap">
+      <h2>外部サイトへのリンク</h2>
+      <p>アプリ内の About 画面に、本ポリシーを掲載した当スタジオのウェブサイトへのリンクを設けています。リンクを開くと端末の標準ブラウザが起動します。</p>
+    </section>
+
+    <section class="wrap">
+      <h2>年齢による取り扱いの違い</h2>
+      <p>ありません。利用者の年齢にかかわらず、いかなる情報も収集しません。</p>
+    </section>
+
+    <section class="wrap">
+      <h2>本ポリシーの変更</h2>
+      <p>内容を変更する場合は、本ページを更新し、冒頭の最終更新日を改めます。重要な変更がある場合は、あわせて改定履歴に記載します。</p>
     </section>
 
     <section class="wrap">
       <h2>お問い合わせ</h2>
-      <p>本ポリシーに関するご質問は、App Store のアプリページに記載の開発者連絡先までお問い合わせください。</p>
+      <p>本ポリシーおよび本アプリに関するご質問は、下記までお問い合わせください。</p>
       <ul class="meta-list">
         <li><span>アプリ名</span><span>HandyDice</span></li>
-        <li><span>提供元</span><span>shinonomekobo（東雲工房）</span></li>
+        <li><span>提供元</span><span>東雲工房（shinonomekobo）</span></li>
+        <li><span>連絡先</span><span><a href="mailto:info@shinonomekobo.com">info@shinonomekobo.com</a></span></li>
+      </ul>
+    </section>
+
+    <section class="wrap">
+      <h2>改定履歴</h2>
+      <ul class="bullets history">
+        <li>2026年9月16日 ― 端末内に保存する設定、モーションセンサーの利用、外部サイトへのリンク、年齢による取り扱い、本ポリシーの変更に関する記載を追加。お問い合わせ先に連絡先メールアドレスを明記</li>
+        <li>2026年8月7日 ― 制定</li>
       </ul>
     </section>
   </main>
