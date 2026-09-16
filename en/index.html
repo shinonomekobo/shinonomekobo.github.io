@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東雲工房 | SHINONOMEKOBO</title>
-<meta name="description" content="東雲工房は、アプリ開発を手がける個人開発スタジオです。">
-<link rel="canonical" href="https://shinonomekobo.com/">
+<title>SHINONOMEKOBO</title>
+<meta name="description" content="Shinonome Kobo is an independent app studio building small, carefully made iOS apps.">
+<link rel="canonical" href="https://shinonomekobo.com/en/">
 <link rel="alternate" hreflang="ja" href="https://shinonomekobo.com/">
 <link rel="alternate" hreflang="en" href="https://shinonomekobo.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://shinonomekobo.com/">
@@ -16,69 +16,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  /* ---------- Hero ---------- */
   .hero{
     min-height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* .hero と .wrap は詳細度が同じで、後から読むこちらが勝つ。
-       ショートハンドにすると .wrap の左右パディングまで 0 になる */
     padding-top: 40px;
     padding-bottom: 80px;
   }
-
   .hero .eyebrow{
     font-size: 0.8rem;
     color: var(--text-dim);
     letter-spacing: 0.04em;
     margin: 0 0 18px;
   }
-
   .brand{
     font-family: 'Shippori Mincho', serif;
     font-weight: 700;
-    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
     margin: 0;
     line-height: 1.25;
   }
-
   .tagline{
     font-size: 1.05rem;
     color: var(--text-dim);
-    max-width: 34ch;
+    max-width: 38ch;
     margin: 0;
   }
-
-  /* ---------- Apps ---------- */
-  .app-row{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
+  .app-row{ display: flex; align-items: center; gap: 20px; }
   .app-icon{
-    width: 56px;
-    height: 56px;
-    flex-shrink: 0;
-    border: 1px solid var(--rule);
-    border-radius: 14px;
+    width: 56px; height: 56px; flex-shrink: 0;
+    border: 1px solid var(--rule); border-radius: 14px;
   }
-
-  .app-name{
-    margin: 0;
-    font-weight: 500;
-  }
-
-  .app-status{
-    margin: 4px 0 0;
-    font-size: 0.85rem;
-    color: var(--gold);
-  }
-
-  .foot-links{
-    margin: 0 0 10px;
-  }
+  .app-name{ margin: 0; font-weight: 500; }
+  .app-status{ margin: 4px 0 0; font-size: 0.85rem; color: var(--gold); }
+  .foot-links{ margin: 0 0 10px; }
   .foot-links a{ color: var(--text-dim); }
   .foot-links a:hover{ color: var(--coral); }
 </style>
@@ -87,35 +59,35 @@
 
   <div class="wrap hero">
     <p class="eyebrow">SHINONOMEKOBO</p>
-    <h1 class="brand">東雲工房</h1>
+    <h1 class="brand">Shinonome Kobo</h1>
     <div class="horizon" aria-hidden="true"></div>
-    <p class="tagline">見えなかったものに、光をあてる個人開発スタジオ。</p>
+    <p class="tagline">An independent studio, shining a light on what went unnoticed.</p>
   </div>
 
   <section class="wrap">
-    <p>東雲工房は、アプリ開発を手がける個人開発スタジオです。日常のちょっとした不便を解消する、小さくて丁寧なアプリをつくっています。</p>
+    <p>Shinonome Kobo is a one-person app studio. We build small, carefully made apps that take the friction out of ordinary moments.</p>
   </section>
 
   <section class="wrap">
-    <h2 class="section-title">アプリ</h2>
+    <h2 class="section-title">Apps</h2>
     <div class="app-row">
       <img class="app-icon" src="/assets/handydice-icon-128.png" alt="" width="56" height="56">
       <div>
-        <p class="app-name"><a href="/handydice/">HandyDice</a></p>
-        <p class="app-status">近日公開</p>
+        <p class="app-name"><a href="/en/handydice/">HandyDice</a></p>
+        <p class="app-status">Coming soon</p>
       </div>
     </div>
   </section>
 
   <section class="wrap">
-    <h2 class="section-title">お問い合わせ</h2>
+    <h2 class="section-title">Contact</h2>
     <p><a href="mailto:info@shinonomekobo.com">info@shinonomekobo.com</a></p>
   </section>
 
   <footer class="wrap">
-    <p class="lang"><span>日本語</span> / <a href="/en/" hreflang="en">English</a></p>
-    <p class="foot-links"><a href="/privacy/">プライバシーポリシー</a></p>
-    © 2026 東雲工房(SHINONOMEKOBO)
+    <p class="lang"><a href="/" hreflang="ja">日本語</a> / <span>English</span></p>
+    <p class="foot-links"><a href="/en/privacy/">Privacy Policy</a></p>
+    © 2026 Shinonome Kobo (SHINONOMEKOBO)
   </footer>
 
 </body>

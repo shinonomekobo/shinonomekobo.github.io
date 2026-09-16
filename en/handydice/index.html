@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HandyDice | Shinonome Kobo</title>
+<meta name="description" content="Shake it, roll it, read the total. HandyDice rolls real 3D physics dice on your iPhone and iPad.">
+<link rel="canonical" href="https://shinonomekobo.com/en/handydice/">
+<link rel="alternate" hreflang="ja" href="https://shinonomekobo.com/handydice/">
+<link rel="alternate" hreflang="en" href="https://shinonomekobo.com/en/handydice/">
+<link rel="alternate" hreflang="x-default" href="https://shinonomekobo.com/handydice/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HandyDice | Shinonome Kobo">
+<meta property="og:description" content="Shake it, roll it, read the total. Real 3D physics dice.">
+<meta property="og:url" content="https://shinonomekobo.com/en/handydice/">
+<meta property="og:image" content="https://shinonomekobo.com/assets/handydice-icon-512.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<link rel="icon" href="/assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .app-hero{ display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+  .app-hero img{
+    width: 108px; height: 108px; border-radius: 24px;
+    border: 1px solid var(--rule); flex-shrink: 0;
+  }
+  .status{
+    display: inline-block; margin: 14px 0 0; padding: 3px 14px;
+    font-size: 0.8rem; color: var(--gold);
+    border: 1px solid var(--rule); border-radius: 999px;
+  }
+  .feature{ padding: 26px 0; border-bottom: 1px solid var(--rule); max-width: 58ch; }
+  .feature:last-child{ border-bottom: none; padding-bottom: 0; }
+  .feature h3{
+    font-family: 'Shippori Mincho', serif; font-weight: 500;
+    font-size: 1.05rem; margin: 0 0 6px;
+  }
+  .feature p{ margin: 0; color: var(--text-dim); }
+  .steps{ counter-reset: step; list-style: none; margin: 0; padding: 0; max-width: 58ch; }
+  .steps li{ counter-increment: step; position: relative; padding: 0 0 26px 52px; }
+  .steps li::before{
+    content: counter(step);
+    position: absolute; left: 0; top: 2px;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; color: var(--gold);
+    border: 1px solid var(--rule); border-radius: 50%;
+  }
+  .steps li:last-child{ padding-bottom: 0; }
+  .steps strong{ font-weight: 500; display: block; }
+  .steps span{ color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+  <div class="wrap page-head">
+    <p class="crumb"><a href="/en/">← Shinonome Kobo</a></p>
+    <div class="app-hero">
+      <img src="/assets/handydice-icon-512.png" alt="The HandyDice app icon" width="108" height="108">
+      <div>
+        <h1 class="page-title">HandyDice</h1>
+        <p class="status">Coming soon to the App Store</p>
+      </div>
+    </div>
+    <div class="horizon" aria-hidden="true"></div>
+    <p class="page-lead">Shake it, roll it, read the total. A tabletop die that lives in your hand.</p>
+  </div>
+
+  <section class="wrap">
+    <p>A board game needs a die and the box has none. Open the app and roll. That is the whole idea. Nothing here picks a number and prints it: the dice are thrown by a 3D physics simulation, and the total comes from whichever faces happen to end up pointing at the ceiling.</p>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">What it does</h2>
+
+    <div class="feature">
+      <h3>They roll like real dice</h3>
+      <p>A 3D physics simulation, so they bounce, collide and tumble to a stop. The pips are carved into the faces, and the shading shifts as the dice turn.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Two ways to throw</h3>
+      <p>Hold the button on screen, or shake the phone itself. Both work the same way, and the longer you keep going, the harder the dice fly.</p>
+    </div>
+
+    <div class="feature">
+      <h3>One to five dice</h3>
+      <p>A slider changes how many are on the table. The total appears on its own once they settle.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Sound and feel</h3>
+      <p>The rolling sound fades with the motion rather than cutting off. Every impact comes back as a tap in your hand. Sound and haptics each switch off on their own.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">How to use it</h2>
+
+    <figure class="demo">
+      <video poster="/assets/handydice-demo-poster.png" autoplay loop muted playsinline preload="metadata" width="296" height="640">
+        <source src="/assets/handydice-demo.mp4" type="video/mp4">
+      </video>
+      <figcaption>They roll while you hold, and the total appears once they stop</figcaption>
+    </figure>
+
+    <ol class="steps">
+      <li><strong>Throw</strong><span>Hold the button at the bottom of the screen, or shake the phone. The dice keep tumbling for as long as you do.</span></li>
+      <li><strong>Let go</strong><span>They slow down on their own, and the total appears once they have stopped.</span></li>
+      <li><strong>Change the count</strong><span>The slider at the top of the screen goes from one die to five.</span></li>
+      <li><strong>Sound and haptics</strong><span>The button at the top left toggles haptics, the one at the top right toggles sound. Both settings survive a restart.</span></li>
+    </ol>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">Requirements</h2>
+    <ul class="meta-list">
+      <li><span>Operating system</span><span>iOS 17.0 or later</span></li>
+      <li><span>Devices</span><span>iPhone and iPad</span></li>
+      <li><span>Languages</span><span>English and Japanese</span></li>
+      <li><span>Network</span><span>Not needed. Works offline</span></li>
+      <li><span>Data collected</span><span>None</span></li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">Support</h2>
+    <p>Send bug reports and requests by email.</p>
+    <p><a href="mailto:info@shinonomekobo.com">info@shinonomekobo.com</a></p>
+    <p style="margin-top:28px;"><a href="/en/handydice/privacy/">Privacy Policy</a></p>
+  </section>
+
+  <footer class="wrap">
+    <p class="lang"><a href="/handydice/" hreflang="ja">日本語</a> / <span>English</span></p>
+    © 2026 Shinonome Kobo (SHINONOMEKOBO)
+  </footer>
+
+  <script>
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('video[autoplay]').forEach(function (v) {
+        v.removeAttribute('autoplay');
+        v.controls = true;
+        v.pause();
+      });
+    }
+  </script>
+
+</body>
+</html>

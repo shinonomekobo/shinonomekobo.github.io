@@ -118,6 +118,38 @@ section p{
   min-width: 8em;
 }
 
+/* ---------- 動作デモの動画 ---------- */
+.demo{
+  margin: 0 0 44px;
+  max-width: 250px;
+}
+
+.demo video{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.5);
+  background: #0b2018;
+}
+
+.demo figcaption{
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* ---------- 言語切り替え ---------- */
+.lang{
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+}
+
+.lang span{ color: var(--text-dim); }
+.lang a{ color: var(--text-dim); }
+.lang a:hover{ color: var(--coral); }
+
 footer{
   padding-top: 40px;
   padding-bottom: 56px;
