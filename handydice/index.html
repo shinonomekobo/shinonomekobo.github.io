@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HandyDice | 東雲工房</title>
+<meta name="description" content="振って、転がして、合計を出す。3D物理演算のサイコロアプリ HandyDice。麻雀卓のような手ざわりを iPhone と iPad で。">
+<link rel="canonical" href="https://shinonomekobo.com/handydice/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HandyDice | 東雲工房">
+<meta property="og:description" content="振って、転がして、合計を出す。3D物理演算のサイコロアプリ。">
+<meta property="og:url" content="https://shinonomekobo.com/handydice/">
+<meta property="og:image" content="https://shinonomekobo.com/assets/handydice-icon-512.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<link rel="icon" href="/assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .app-hero{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+  }
+  .app-hero img{
+    width: 108px;
+    height: 108px;
+    border-radius: 24px;
+    border: 1px solid var(--rule);
+    flex-shrink: 0;
+  }
+  .status{
+    display: inline-block;
+    margin: 14px 0 0;
+    padding: 3px 14px;
+    font-size: 0.8rem;
+    color: var(--gold);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+  }
+  .feature{
+    padding: 26px 0;
+    border-bottom: 1px solid var(--rule);
+    max-width: 58ch;
+  }
+  .feature:last-child{ border-bottom: none; padding-bottom: 0; }
+  .feature h3{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 0 0 6px;
+  }
+  .feature p{ margin: 0; color: var(--text-dim); }
+
+  .steps{
+    counter-reset: step;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 58ch;
+  }
+  .steps li{
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 26px 52px;
+  }
+  .steps li::before{
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--gold);
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+  }
+  .steps li:last-child{ padding-bottom: 0; }
+  .steps strong{ font-weight: 500; display: block; }
+  .steps span{ color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+  <div class="wrap page-head">
+    <p class="crumb"><a href="/">← 東雲工房</a></p>
+    <div class="app-hero">
+      <img src="/assets/handydice-icon-512.png" alt="HandyDice のアプリアイコン" width="108" height="108">
+      <div>
+        <h1 class="page-title">HandyDice</h1>
+        <p class="status">App Store で近日公開</p>
+      </div>
+    </div>
+    <div class="horizon" aria-hidden="true"></div>
+    <p class="page-lead">振って、転がして、合計を出す。手のひらの上の卓上サイコロ。</p>
+  </div>
+
+  <section class="wrap">
+    <p>卓上ゲームでサイコロが見つからないとき、アプリを開いてすぐ振れる。それだけのアプリです。乱数をぽんと表示するのではなく、3D の物理演算でサイコロを実際に転がし、止まった面を読み取って合計を出します。</p>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">特徴</h2>
+
+    <div class="feature">
+      <h3>本物のように転がる</h3>
+      <p>3D の物理演算で、弾んで、ぶつかって、転がって止まります。目は面に彫り込まれていて、光の当たり方で陰影が変わります。</p>
+    </div>
+
+    <div class="feature">
+      <h3>振り方は 2 通り</h3>
+      <p>画面下のボタンを押し続けるか、端末そのものを振るか。どちらでも同じように転がります。長く振るほど勢いが増します。</p>
+    </div>
+
+    <div class="feature">
+      <h3>1 個から 5 個まで</h3>
+      <p>スライダーで個数を変えられます。止まると合計が自動で表示されます。</p>
+    </div>
+
+    <div class="feature">
+      <h3>音と手ざわり</h3>
+      <p>転がる音はサイコロの動きに合わせて自然に小さくなります。ぶつかるたびに振動が返ります。音と振動はそれぞれ単独でオフにできます。</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">使い方</h2>
+    <ol class="steps">
+      <li><strong>振る</strong><span>画面下のボタンを押し続けるか、端末を振ります。押している間、振っている間はずっと転がり続けます。</span></li>
+      <li><strong>離す</strong><span>手を止めるとサイコロが自然に減速し、止まったところで合計が表示されます。</span></li>
+      <li><strong>個数を変える</strong><span>画面上部のスライダーを動かすと、1 個から 5 個まで変えられます。</span></li>
+      <li><strong>音と振動を切り替える</strong><span>画面上部の左のボタンで振動、右のボタンで音を切り替えます。設定は次回起動時も保たれます。</span></li>
+    </ol>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">対応環境</h2>
+    <ul class="meta-list">
+      <li><span>対応 OS</span><span>iOS 17.0 以降</span></li>
+      <li><span>対応端末</span><span>iPhone / iPad</span></li>
+      <li><span>対応言語</span><span>日本語 / 英語</span></li>
+      <li><span>通信</span><span>不要。オフラインで動作します</span></li>
+      <li><span>データ収集</span><span>ありません</span></li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">サポート</h2>
+    <p>不具合のご報告、ご要望はメールでお送りください。</p>
+    <p><a href="mailto:info@shinonomekobo.com">info@shinonomekobo.com</a></p>
+    <p style="margin-top:28px;"><a href="/handydice/privacy/">プライバシーポリシー</a></p>
+  </section>
+
+  <footer class="wrap">
+    © 2026 東雲工房(SHINONOMEKOBO)
+  </footer>
+
+</body>
+</html>

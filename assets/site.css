@@ -1,0 +1,132 @@
+/* 東雲工房 共通スタイル。サイト内のすべてのページがこれを読む。
+   配色・書体をここ1か所で管理し、ページごとに分岐させない。 */
+
+:root{
+  --bg: #14182b;
+  --panel: #1c2038;
+  --text: #f3efe7;
+  --text-dim: #b3aec4;
+  --gold: #d8a657;
+  --coral: #e2896d;
+  --rule: rgba(243,239,231,0.14);
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: var(--gold); text-decoration: none; }
+a:hover{ color: var(--coral); }
+a:focus-visible, button:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.wrap{
+  max-width: 720px;
+  margin: 0 auto;
+  /* 横だけを指定する。padding ショートハンドにすると、同じ要素が持つ
+     section や footer の縦パディングを詳細度で打ち消してしまう */
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+section{
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border-top: 1px solid var(--rule);
+}
+
+section p{
+  max-width: 58ch;
+  color: var(--text);
+}
+
+.section-title{
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 0 0 28px;
+}
+
+.horizon{
+  height: 1px;
+  width: 0;
+  margin: 28px 0 30px;
+  background: linear-gradient(90deg, var(--gold), var(--coral) 60%, transparent);
+  animation: draw 1.6s ease-out 0.3s forwards;
+}
+
+@keyframes draw{
+  to{ width: min(280px, 60%); }
+}
+
+/* ---------- 下層ページの見出し ---------- */
+.page-head{
+  padding-top: 52px;
+  padding-bottom: 8px;
+}
+
+.crumb{
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin: 0 0 30px;
+}
+
+.page-title{
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 6.5vw, 3.2rem);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.page-lead{
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  max-width: 40ch;
+  margin: 0;
+}
+
+/* ---------- 汎用の小物 ---------- */
+.meta-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 58ch;
+}
+
+.meta-list li{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.meta-list li span:first-child{
+  color: var(--text-dim);
+  min-width: 8em;
+}
+
+footer{
+  padding-top: 40px;
+  padding-bottom: 56px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--rule);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .horizon{ animation: none; width: min(280px, 60%); }
+  html{ scroll-behavior: auto; }
+}

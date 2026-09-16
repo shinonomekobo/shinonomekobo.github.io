@@ -5,53 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>東雲工房 | SHINONOMEKOBO</title>
 <meta name="description" content="東雲工房は、アプリ開発を手がける個人開発スタジオです。">
+<link rel="canonical" href="https://shinonomekobo.com/">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<link rel="icon" href="/assets/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-  :root{
-    --bg: #14182b;
-    --panel: #1c2038;
-    --text: #f3efe7;
-    --text-dim: #b3aec4;
-    --gold: #d8a657;
-    --coral: #e2896d;
-    --rule: rgba(243,239,231,0.14);
-  }
-
-  *{ box-sizing: border-box; }
-
-  html{ scroll-behavior: smooth; }
-
-  body{
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    line-height: 1.9;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a{ color: var(--gold); text-decoration: none; }
-  a:hover{ color: var(--coral); }
-  a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--gold);
-    outline-offset: 3px;
-  }
-
-  .wrap{
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
-
   /* ---------- Hero ---------- */
   .hero{
     min-height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 0 80px;
+    /* .hero と .wrap は詳細度が同じで、後から読むこちらが勝つ。
+       ショートハンドにすると .wrap の左右パディングまで 0 になる */
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   .hero .eyebrow{
@@ -69,18 +40,6 @@
     line-height: 1.25;
   }
 
-  .horizon{
-    height: 1px;
-    width: 0;
-    margin: 28px 0 30px;
-    background: linear-gradient(90deg, var(--gold), var(--coral) 60%, transparent);
-    animation: draw 1.6s ease-out 0.3s forwards;
-  }
-
-  @keyframes draw{
-    to{ width: min(280px, 60%); }
-  }
-
   .tagline{
     font-size: 1.05rem;
     color: var(--text-dim);
@@ -88,25 +47,7 @@
     margin: 0;
   }
 
-  /* ---------- Sections ---------- */
-  section{
-    padding: 64px 0;
-    border-top: 1px solid var(--rule);
-  }
-
-  section p{
-    max-width: 58ch;
-    color: var(--text);
-  }
-
   /* ---------- Apps ---------- */
-  .section-title{
-    font-family: 'Shippori Mincho', serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin: 0 0 28px;
-  }
-
   .app-row{
     display: flex;
     align-items: center;
@@ -132,18 +73,11 @@
     color: var(--gold);
   }
 
-  /* ---------- Footer ---------- */
-  footer{
-    padding: 40px 0 56px;
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    border-top: 1px solid var(--rule);
+  .foot-links{
+    margin: 0 0 10px;
   }
-
-  @media (prefers-reduced-motion: reduce){
-    .horizon{ animation: none; width: min(280px, 60%); }
-    html{ scroll-behavior: auto; }
-  }
+  .foot-links a{ color: var(--text-dim); }
+  .foot-links a:hover{ color: var(--coral); }
 </style>
 </head>
 <body>
@@ -162,9 +96,9 @@
   <section class="wrap">
     <h2 class="section-title">アプリ</h2>
     <div class="app-row">
-      <div class="app-icon" aria-hidden="true"></div>
+      <img class="app-icon" src="/assets/handydice-icon-128.png" alt="" width="56" height="56">
       <div>
-        <p class="app-name">最初のアプリ</p>
+        <p class="app-name"><a href="/handydice/">HandyDice</a></p>
         <p class="app-status">近日公開</p>
       </div>
     </div>
@@ -176,6 +110,7 @@
   </section>
 
   <footer class="wrap">
+    <p class="foot-links"><a href="/privacy/">プライバシーポリシー</a></p>
     © 2026 東雲工房(SHINONOMEKOBO)
   </footer>
 
